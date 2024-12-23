@@ -3,7 +3,6 @@ import java.util.Arrays;
 public class Lesson3 {
     public static void main(String[] args) {
         method13(12);
-
     }
 
     public static void printThreeWords() {
