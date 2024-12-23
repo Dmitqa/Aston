@@ -2,7 +2,8 @@ import java.util.Arrays;
 
 public class Lesson3 {
     public static void main(String[] args) {
-        method13(5);
+        method13(12);
+
     }
 
     public static void printThreeWords() {
@@ -16,26 +17,24 @@ public class Lesson3 {
         int a = 5;
         int b = -11;
         System.out.println(a + b >= 0 ? "Сумма положительная" : "Сумма отрицательная");
-        }
+    }
 
     public static void printColor() {
         int value = 320;
         if (value <= 0) {
             System.out.println("Красный");
-        }
-        else if (value > 0 && value <= 100) {
+        } else if (value > 0 && value <= 100) {
             System.out.println("Желтый");
-        }
-        else{
+        } else {
             System.out.println("Зеленый");
         }
     }
 
     public static void compareNumbers() {
-         int a = 45;
-         int b = 6;
-         System.out.println(a >= b ? "a >= b" : "a < b");
-        }
+        int a = 45;
+        int b = 6;
+        System.out.println(a >= b ? "a >= b" : "a < b");
+    }
 
     public static void method5(int a, int b) {
         System.out.println(a + b >= 10 && a + b <= 20);
@@ -96,9 +95,7 @@ public class Lesson3 {
 
     public static int[] method14(int len, int initialValue) {
         int[] mass = new int[len];
-        for (int el = 0; el < mass.length; el++) {
-            mass[el] = initialValue;
-        }
+        Arrays.fill(mass, initialValue);
         return mass;
     }
 }
