@@ -15,12 +15,12 @@ public class Lesson4 {
         persArray[4].printInfo();
         System.out.println();
 
-        Park outObj = new Park();
-        Park.AttractionInfo carousel = outObj.new AttractionInfo("Карусель",
+        Park attraction = new Park();
+        Park.AttractionInfo carousel = attraction.new AttractionInfo("Карусель",
                 "с 10-00 до 18-00", 500);
-        Park.AttractionInfo ferrisWheel = outObj.new AttractionInfo("Колесо обозрения",
+        Park.AttractionInfo ferrisWheel = attraction.new AttractionInfo("Колесо обозрения",
                 "с 09-00 до 21-00", 200);
-        Park.AttractionInfo trainRides = outObj.new AttractionInfo("Паровозик",
+        Park.AttractionInfo trainRides = attraction.new AttractionInfo("Паровозик",
                 "с 10-00 до 16-00", 350);
 
         carousel.attractionAbout();
