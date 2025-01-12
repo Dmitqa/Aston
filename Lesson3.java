@@ -2,7 +2,20 @@ import java.util.Arrays;
 
 public class Lesson3 {
     public static void main(String[] args) {
-        method13(12);
+        printThreeWords();
+        checkSumSign();
+        printColor();
+        compareNumbers();
+        System.out.println(method5(5, 16));
+        method6(-6);
+        System.out.println(method7(45));
+        method8("Day", 5);
+        System.out.println(method9(2000));
+        System.out.println(Arrays.toString(method10()));
+        System.out.println(Arrays.toString(method11()));
+        System.out.println(Arrays.toString(method12()));
+        method13(5);
+        System.out.println(Arrays.toString(method14(8, 4)));
     }
 
     public static void printThreeWords() {
@@ -35,16 +48,16 @@ public class Lesson3 {
         System.out.println(a >= b ? "a >= b" : "a < b");
     }
 
-    public static void method5(int a, int b) {
-        System.out.println(a + b >= 10 && a + b <= 20);
+    public static boolean method5(int a, int b) {
+        return (a + b >= 10 && a + b <= 20);
     }
 
     public static void method6(int num) {
-        System.out.println(num >= 0 ? "Положительное" : "Отрицательное");
+        System.out.println((num >= 0 ? "Число положительное" : "Число отрицательное"));
     }
 
-    public static void method7(int num) {
-        System.out.println(num < 0);
+    public static boolean method7(int num) {
+        return num < 0;
     }
 
     public static void method8(String word, int num) {
@@ -53,32 +66,32 @@ public class Lesson3 {
         }
     }
 
-    public static void method9(int year) {
-        System.out.println(year % 400 == 0 || year % 4 == 0 && year % 100 != 0);
+    public static boolean method9(int year) {
+        return (year % 400 == 0 || year % 4 == 0 && year % 100 != 0);
     }
 
-    public static void method10() {
+    public static int[] method10() {
         int[] mass = {1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
         for (int el = 0; el < mass.length; el++) {
             mass[el] = Math.abs(mass[el] - 1);
         }
-        System.out.println(Arrays.toString(mass));
+        return mass;
     }
 
-    public static void method11() {
+    public static int[] method11() {
         int[] arr = new int[100];
         for (int el = 0; el < arr.length; el++) {
             arr[el] += el + 1;
         }
-        System.out.println(Arrays.toString(arr));
+        return arr;
     }
 
-    public static void method12() {
+    public static int[] method12() {
         int[] mass = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
         for (int el = 0; el < mass.length; el++) {
             mass[el] = mass[el] < 6 ? mass[el] * 2 : mass[el];
         }
-        System.out.println(Arrays.toString(mass));
+        return mass;
     }
 
     public static void method13(int len) {
