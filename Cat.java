@@ -1,12 +1,23 @@
 public class Cat extends Animal {
+    private static int countCat;
     public boolean hunger;
     public int catPortion;
-    public static int catBowl = 70;
-    public Cat(String name, boolean hunger, int catPortion){
+
+    public void addCat() {
+        countCat++;
+    }
+
+    public static int getCountAnimal() {
+        return countCat;
+    }
+
+    public Cat(String name, boolean hunger, int catPortion) {
         this.name = name;
         this.hunger = hunger;
         this.catPortion = catPortion;
+        addCat();
     }
+
     public void run(int distance) {
         if (distance < 0) {
             System.out.println("Cat " + name + " stay stand.");
@@ -23,9 +34,5 @@ public class Cat extends Animal {
         } else {
             System.out.println("Cat " + name + " can't swim.");
         }
-    }
-
-    public static int replenishCatBowl(int newFood) {
-        return catBowl += newFood;
     }
 }

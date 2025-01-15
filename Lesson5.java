@@ -1,14 +1,13 @@
 public class Lesson5 {
     public static void main(String[] args) {
-        //Triangle tri = new Triangle(5, 6, 7);
-        //tri.infoGeometricFigure();
+        Triangle tri = new Triangle(5, 6, 7, "Black", "White");
+        tri.infoGeometricFigure();
 
-        //Rectangle rec = new Rectangle(5, 7);
-        //rec.infoGeometricFigure();
+        Rectangle rec = new Rectangle(5, 7, "Pink", "Cyan");
+        rec.infoGeometricFigure();
 
-        //Circle cir = new Circle(10);
-        //cir.infoGeometricFigure();
-
+        Circle cir = new Circle(10, "Yellow", "Green");
+        cir.infoGeometricFigure();
 
         Cat[] catsArray = new Cat[5];
         catsArray[0] = new Cat("Bars", false, 25);
@@ -17,11 +16,13 @@ public class Lesson5 {
         catsArray[3] = new Cat("Tom", false, 22);
         catsArray[4] = new Cat("Mimi", false, 10);
 
-        System.out.println(Cat.catBowl);
+        Bowl miska = new Bowl(70);
+
+        System.out.println("In bowl " + miska.infoBowl() + " food.");
 
         for (Cat value : catsArray) {
-            if (value.catPortion <= Cat.catBowl) {
-                Cat.catBowl -= value.catPortion;
+            if (value.catPortion <= Bowl.foodBowl) {
+                Bowl.foodBowl -= value.catPortion;
                 value.hunger = true;
             }
         }
@@ -34,15 +35,19 @@ public class Lesson5 {
             }
         }
 
-        System.out.println("In bowl " + Cat.catBowl + " food.");
-        int currentBowl = Cat.replenishCatBowl(100);
-        System.out.println("In bowl " + currentBowl + " food.");
+        System.out.println("In bowl " + miska.infoBowl() + " food.");
+        miska.replenishBowl(100);
+        System.out.println("In bowl " + miska.infoBowl() + " food.");
 
         catsArray[1].run(250);
         catsArray[1].swim(250);
 
         Dog Puppey = new Dog("Puppey");
-        Puppey.swim(100);
+        Puppey.swim(8);
         Puppey.run(-100);
+
+        System.out.println(Animal.getCountAnimal());
+        System.out.println(Cat.getCountAnimal());
+        System.out.println(Dog.getCountAnimal());
     }
 }

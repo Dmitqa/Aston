@@ -1,7 +1,19 @@
 public class Dog extends Animal {
-    public Dog(String name){
-        this.name = name;
+    private static int countDog;
+
+    public void addDog() {
+        countDog++;
     }
+
+    public static int getCountAnimal() {
+        return countDog;
+    }
+
+    public Dog(String name) {
+        this.name = name;
+        addDog();
+    }
+
     public void run(int distance) {
         if (distance < 0) {
             System.out.println("Dog " + name + " stay stand.");
